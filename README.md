@@ -18,45 +18,27 @@ Predicted customer churn with 52% recall using Logistic Regression, RandomForest
 
 
 ## Dataset & Methodology
-- **Data Source:** [Dataset Name](link-to-dataset) — X rows, Y features (describe target variable and class balance).
-- **Data Preprocessing:** Handled missing values via median imputation, applied one-hot encoding to categorical features, and used SMOTE to address class imbalance.
-- **Models Evaluated:** Logistic Regression (Baseline), Random Forest, XGBoost, LightGBM.
-- **Validation Strategy:** 5-fold stratified cross-validation tuned with Optuna.
+- **Data Source:** [Telco customer churn: IBM dataset]https://www.kaggle.com/datasets/yeanzc/telco-customer-churn-ibm-dataset?resource=download — 7043 rows, 33 features (target variable is Churn Value, imabalnced data with 1869 Churn records available).
+- **Data Preprocessing:** Handled missing values via median imputation, applied one-hot encoding to categorical features, and used stratificat_on to preserve imabalnce.
+- **Models Evaluated:** Logistic Regression (Baseline), Random Forest, Support Vector Machines (SVM).
+
 
 ## Project Structure
 ```text
-├── data/               # Raw and processed datasets (or instructions to download)
+├── data/               # Raw dataset from Kaggle
 ├── notebooks/          # Exploratory data analysis (EDA) and experimentation
 ├── src/                # Clean, modular Python scripts for preprocessing and training
 ├── models/             # Saved model artifacts
-├── requirements.txt    # Python dependencies
 └── README.md
 ```
 
 ## Tech Stack
-- **Languages:** Python, SQL
-- **Libraries:** Pandas, NumPy, Scikit-learn, XGBoost, SHAP, Matplotlib/Seaborn
+- **Languages:** Python
+- **Libraries:** Pandas, NumPy, Scikit-learn, RandomForest (Ensemble), Support Vector Machines, Matplotlib/Seaborn
 
-## How to Reproduce
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com
-   cd your-repo-name
-   ```
-2. **Create a virtual environment and install dependencies:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-3. **Run the pipeline:**
-   ```bash
-   python src/train.py
-   ```
 
-## Future Improvements
-- Deploy the model as a REST API using FastAPI and Docker.
-- Add data drift monitoring for production readiness.
+
+
 
 ## Contact
-- **Your Name** — [LinkedIn Profile](https://linkedin.com) | [Portfolio Website]
+- **Sobia Pervaiz** — [LinkedIn Profile]https://www.linkedin.com/in/sobia-pervaiz-071848215/ | 
